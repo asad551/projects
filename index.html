@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asad - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(3, 3, 74);
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(19, 19, 130);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li{
+            color: white;
+            list-style: none;
+            margin: 0 25px;
+            text-decoration: none;
+        }
+        nav ul li:hover{
+            background-color:transparent;
+            color: #4CAF50;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        .left{
+            font-size: 1.7rem;
+            letter-spacing:0.5cap
+        }
+        .firstSection{
+
+            display: flex;
+            justify-content: space-around;
+            margin: 210px 0;
+
+        }
+        .firstSection div{
+            width: 35%;
+        }
+        .leftSection{
+            font-size: 3rem;
+            margin-top: 70px;
+            width: 50px;
+
+        }
+        .rightSection{
+           background-color: transparent;
+        }
+        .rightSection img{
+            margin-top: 20px;
+            margin-right: 5%;
+            width: 400px;
+            height: 400px;
+        }
+        .nameColor{
+            color: rgb(83, 236, 116);
+        }
+        #element{
+            color: rgb(231, 55, 120);
+        }
+        .secondSection{
+
+            max-width: 80vw;
+            margin: auto;
+        }
+        .exp1{
+            margin-top: 40px;
+        }
+        .rightSide{
+            margin-left: 1000px;
+        }
+        .secondSection ul{
+            margin-top: 10px;
+            margin-left: auto;
+            color: antiquewhite;
+        }
+        .exp2 h3{
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+        .exp2 p{
+            margin-top: 0;
+        }
+        .thirdSection{
+            max-width: 80vw;
+            margin: auto;
+        }
+        .thirdSection h1{
+            text-align: center;
+            background-color: #f9f9f9;
+            margin-top: 240px;
+            padding-top: 10px;
+            margin-left: 450px;
+            color: #333;
+            width: 300px;
+            height: 50px;
+            border-radius: 10px;
+            box-shadow: #9e9d9d;
+        }
+        .skills-container {
+        width: 80vw;
+        max-width: 70vw;
+        margin: 50px auto;
+        }
+        .skill {
+        margin-bottom: 15px;
+        }
+        .skill-header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        }
+
+        .skill-bar {
+        height: 25px;
+        background: #e0e0e0;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        }
+
+        .skill-fill {
+        height: 100%;
+        border-radius: 20px;
+        width: 0;
+        background: rgb(28, 238, 95);
+        }
+        .about{
+        max-width: 80vw;
+        margin: auto;
+        }
+
+        .skill-fill.html { width: 90%; }
+        .skill-fill.css { width: 90%; }
+        .skill-fill.js { width: 75%; }
+        .skill-fill.react { width: 65%; }
+        .skill-fill.uiux { width: 80%; }
+
+        .certification-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 20px;
+        }
+
+        .certification-box {
+        background-color: #f4f4f4;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        color: navy;
+        }
+
+        .certification-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .certification-box h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        }
+
+        .certification-box p {
+        font-size: 16px;
+        color: #555;
+        }
+        .degree-section {
+        margin: 140px auto;
+        max-width: 900px;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .degree-section h2 {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #333;
+        }
+
+        .degree {
+        background-color: #fff;
+        border-left: 5px solid #4caf50;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .degree h3 {
+        font-size: 1.5em;
+        color: #333;
+        margin-bottom: 10px;
+        }
+
+        .institution {
+        font-size: 1.1em;
+        color: #555;
+        margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+        .degree-section {
+            padding: 10px;
+        }
+
+        .degree {
+            padding: 15px;
+        }
+    }
+        .work-experience-section {
+        margin: 40px auto;
+        max-width: 900px;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background-color:#f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .work-experience-section h2 {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #333;
+        }
+
+        .experience {
+        background-color:rgb(255, 255, 255);
+        border-left: 5px solid #10db2b;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience h3 {
+        font-size: 1.5em;
+        color: #333;
+        margin-bottom: 10px;
+        }
+
+        .company {
+        font-size: 1.1em;
+        color: #555;
+        margin-bottom: 10px;
+        font-weight: bold;
+        }
+
+        .responsibilities {
+        padding-left: 20px;
+        }
+
+        .responsibilities li {
+        margin-bottom: 8px;
+        color: #757272;
+        }
+
+        @media (max-width: 768px) {
+        .work-experience-section {
+            padding: 10px;
+        }
+
+        .experience {
+            padding: 15px;
+        }
+        }
+        .btn {
+        margin-top: 15px;
+        padding: 10px 8px;
+        color: rgb(250, 250, 251);
+        background-color: #057d23;
+        border-radius: 6px;
+        border-color: #057d23;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+        background-color: #214ad2;
+        }
+
+        .btn:active {
+        transform: scale(0.95);
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .download-btn:active {
+            transform: translateY(1px);
+        }
+        .aboutMe h1{
+            margin-top: 210px;
+            margin-left: 100px;
+            text-align: left;
+            font-size: 2rem;
+        }
+        .aboutMe p{
+            background-color: #e0e0e0;
+            margin: 50px 100px;
+            color: rgb(17, 0, 0);
+            border-radius: 6px;
+            font-size: 1.5rem;
+            padding: 10px;
+            box-shadow: #214ad2;
+            margin-bottom: 200px;
+
+        }
+        html {
+        scroll-padding-top: 150px; /* Adjust this value to match your navbar height */
+        }
+        /* Minimal Contact Section */
+        .contact {
+        width: 50vw;
+        padding: 40px 20px;
+        text-align: center;
+        background-color: #faf8f8;
+        margin: auto;
+        border-radius: 10px;
+        }
+
+        .contact h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: black;
+        }
+
+        .contact form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 500px;
+        margin: 0 auto;
+        }
+
+        .contact form div {
+        margin-bottom: 15px;
+        width: 100%;
+        }
+
+        .contact form label {
+        display: block;
+        font-size: 1rem;
+        margin-bottom: 5px;
+        color: #333;
+        }
+
+        .contact form input,
+        .contact form textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        }
+
+        .contact form button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-top: 10px;
+        }
+
+        .contact form button:hover {
+        background-color: #45a049;
+        }
+
+        .contact p {
+        margin-top: 20px;
+        font-size: 1rem;
+        color: #333;
+        }
+
+        .contact a {
+        color: #333;
+        text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left"> Asad's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#aboutMe">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#workExperience">Work Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="nameColor">Asad </span>
+                <br>I am a passionate <br>
+                <span id="element"></span>
+                <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+                <!-- Setup and start animation! -->
+              <script>
+                var typed = new Typed('#element', {
+                  strings: ['Front End Developer', 'UI/UX Designer'],
+                  typeSpeed: 70,
+                });
+              </script>
+                <br>
+                <a href="/resume.pdf" download="Asad Ullah Khan - Front-End Developer - PUCIT" class="download-btn">
+                    Download Resume
+                </a>
+            </div>
+            <div class="rightSection">
+                <img src="bgg.png" alt="Background Image">
+            </div>
+        </section>
+        <section id="workExperience" class="secondSection">
+            <div class="work-experience-section">
+                <h2>Work Experience</h2>
+                <div class="experience">
+                    <h3>Managing Member</h3>
+                    <p class="company">Savingter LLC | Oct 2021 - Present</p>
+                    <ul class="responsibilities">
+                        <li>Established limited liability Company in Texas, US as foreigner to build e- commerce store on 3rd
+                            party marketplaces like Amazon, eBay, Walmart etc. </li>
+                        <li>Successfully started doing business on FBA wholesale model on Amazon, in US marketplace</li>
+                        <li>Fulfilled customer shipping needs by completing all purchase orders and customer invoices.</li>
+                        <li>Evaluated sales reports and financial statements to manage cash flow and develop techniques to
+                            improve business.</li>
+                    </ul>
+                </div>
+                <div class="experience">
+                    <h3>Computer Science Lecturer</h3>
+                    <p class="company">Prime College for Science, Vehari | Oct 2019 - Dec 2022</p>
+                    <ul class="responsibilities">
+                        <li>Taught core computer science subjects and developed engaging course materials.</li>
+                        <li>Mentored students in projects, research, and career growth.</li>
+                        <li>Assessed student performance through exams, quizzes, and project evaluations, ensuring quality
+                            education.</li>
+                        <li>Assisted in curriculum updates and implemented modern teaching techniques.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="thirdSection">
+            <h1>My Skill Set</h1>
+            <div class="skills-container">
+                <div class="skill">
+                  <div class="skill-header">
+                    <span>HTML</span>
+                    <span>90%</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-fill html"></div></div>
+                </div>
+                <div class="skill">
+                  <div class="skill-header">
+                    <span>CSS</span>
+                    <span>90%</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-fill css"></div></div>
+                </div>
+
+                <div class="skill">
+                  <div class="skill-header">
+                    <span>JavaScript</span>
+                    <span>75%</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-fill js"></div></div>
+                </div>
+
+                <div class="skill">
+                  <div class="skill-header">
+                    <span>React</span>
+                    <span>65%</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-fill react"></div></div>
+                </div>
+                <div class="skill">
+                  <div class="skill-header">
+                    <span>Ui/Ux Figma</span>
+                    <span>80%</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-fill uiux"></div></div>
+                </div>
+              </div>
+        </section>
+        <section id="education" class="about">
+            <div class="degree-section">
+                <h2>Education</h2>
+                <div class="degree">
+                  <h3>Bachelor of Science in Software Engineering</h3>
+                  <p class="institution">PUCIT - University of the Punjab, Lahore | 2013 - 2017</p>
+                </div>
+                <h2>Certifications</h2>
+            <div class="certification-container">
+                <div class="certification-box">
+                  <h3>Meta Front-End Developer</h3>
+                  <p>Coursera Certification</p>
+                  <a href="https://www.coursera.org/account/accomplishments/professional-cert/8TL8MHZJO820"><button class="btn">Details</button></a>
+                </div>
+                <div class="certification-box">
+                  <h3>Microsoft Power BI Developer</h3>
+                  <p>Coursera Certification</p>
+                  <a href="https://www.coursera.org/account/accomplishments/professional-cert/KJ4VAQVRX5UY"><button class="btn">Details</button></a>
+                </div>
+                <div class="certification-box">
+                  <h3>Google Data Analytics</h3>
+                  <p>Coursera Certification</p>
+                  <a href="https://www.coursera.org/account/accomplishments/professional-cert/BUEXCCCMBCJA"><button class="btn">Details</button></a>
+                </div>
+              </div>
+
+        </section>
+        <section id="aboutMe" class="aboutMe">
+            <h1>Summary</h1>
+            <p>I am a software engineer with a BS degree and expertise in front-end development and data analytics. I completed the Meta Front-End Developer specialization, gaining proficiency in HTML, CSS, JavaScript, React, and responsive design. Additionally, certifications in Google Data Analytics and Microsoft Power BI enhanced my skills in data visualization, Power BI, and DAX. <br> I am passionate about building user-centric web applications and leveraging data-driven insights to enhance functionality and user experience. My goal is to develop high-performance, scalable web solutions that drive business growth and innovation.</p>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <form action="YOUR_SERVER_ENDPOINT" method="POST">
+              <div>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name" />
+              </div>
+              <div>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email" />
+              </div>
+              <div>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Type your message"></textarea>
+              </div>
+              <button type="submit">Send</button>
+            </form>
+            <p>Or reach me at: <a href="mailto:your-email@example.com">khanasadullah29@gmail.com</a></p>
+          </section>
+    </main>
+</body>
+</html>
